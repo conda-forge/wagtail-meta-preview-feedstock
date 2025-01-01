@@ -6,21 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail-meta-preview-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtail-meta-preview-{{ version }}.tar.gz
   sha256: e8872c7c7d548c3f992024d8a2cb610426715be07c4525f62147c92bc10ec596
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - wheel
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - wagtail >=4.1
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Frojd/wagtail-meta-preview
