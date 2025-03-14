@@ -1,5 +1,5 @@
 {% set name = "wagtail-meta-preview" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: cf1922356c3625ea804d6896a28133bd5639cd060a0cdb9f4241c6a9f46cb0a3
+  sha256: 327ac63c8f7ff19e53ed5bd7f68d46406d6442f3ad85dd76bb77a1b404e9fcfe
 
 build:
   noarch: python
