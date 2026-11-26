@@ -1,13 +1,13 @@
 {% set name = "wagtail-meta-preview" %}
-{% set version = "4.2.1" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 327ac63c8f7ff19e53ed5bd7f68d46406d6442f3ad85dd76bb77a1b404e9fcfe
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 62dbe4c815e13f3885d2a914866cb1521784efcc15d19e58196671df5ed5c0a1
 
 build:
   noarch: python
